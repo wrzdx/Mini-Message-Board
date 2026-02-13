@@ -1,11 +1,10 @@
 <form method="POST" action="/new">
   <p>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="messageUser">
+    <input type="text" name="messageUser" placeholder="Name">
   </p>
   <p>
-    <label for="message">Message:</label>
-    <textarea type="text" id="message" name="messageText"> </textarea>
+    <textarea type="text" name="messageText" placeholder="Message" autofocus
+        required></textarea>
   </p>
   <button>Submit</button>
 </form>

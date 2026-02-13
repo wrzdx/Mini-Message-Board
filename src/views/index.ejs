@@ -1,11 +1,23 @@
 <html>
-    <head>
-      <title>Mini Message Board</title>
-      <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-      <%= messages.map((message) => message.user) %>
-      <%- include("./form") %>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Mini Message Board</title>
+</head>
 
-    </body>
+<body>
+  <div class="messageBoard">
+    <h1>Mini Message Board</h1>
+    <div class="messages">
+      <% messages.forEach(({ user, added, text }) => { %>
+  <%- include("./message", { user, added, text }) %>
+  <% }) %>
+    </div>
+    
+  <%- include("./form") %>
+  </div>
+  
+</body>
+
 </html>
