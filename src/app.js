@@ -7,7 +7,7 @@ import indexRouter from "./routes/indexRoute.js"
 loadEnvFile()
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 8000
 
 const app = express()
 app.set("views", path.join(__dirname, "views"))
