@@ -10,8 +10,8 @@
   <div class="messageBoard">
     <h1>Mini Message Board</h1>
     <div class="messages">
-      <% messages.forEach(({ user, added, text }) => { %>
-  <%- include("./message", { user, added, text }) %>
+      <% messages.forEach(({ username, added, text }) => { %>
+  <%- include("./message", { username, added: formatDate(added), text }) %>
   <% }) %>
     </div>
     
