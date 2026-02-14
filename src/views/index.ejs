@@ -1,4 +1,5 @@
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +12,22 @@
     <h1>Mini Message Board</h1>
     <div class="messages">
       <% messages.forEach(({ username, added, text }) => { %>
-  <%- include("./message", { username, added: formatDate(added), text }) %>
-  <% }) %>
+      <%- include("./message", { username, added: formatDate(added), text }) %>
+      <% }) %>
     </div>
-    
-  <%- include("./form") %>
+
+    <%- include("./form") %>
+    <% if (locals.errors && errors.length > 0) { %>
+    <script type="text/javascript">
+      const rawData = '<%- JSON.stringify(errors) %>';
+      const errorArray = JSON.parse(rawData);
+      const text = errorArray.map(err => err.msg)
+        .join("\n");
+      alert("Ошибки заполнения:\n\n" + text);
+    </script>
+    <% } %>
   </div>
-  
+
 </body>
 
 </html>
