@@ -1,7 +1,7 @@
 # Mini Message Board
 
 A simple message board built with Node.js, Express, and EJS.
-Users can submit a message with their name, and all messages are displayed on the main page. The purpose is to sharpen skill of express js.
+Users can submit a message with their name, and all messages are displayed on the main page. The purpose is to sharpen skills of making express js app and working with db.
 
 ![preview](/public/image.png)
 
