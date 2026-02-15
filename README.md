@@ -11,6 +11,7 @@ Users can submit a message with their name, and all messages are displayed on th
 * Display all submitted messages
 * Server-side rendering with EJS
 * Static file serving for styles
+* Working with remote DB (Neon)
 
 ## Tech Stack
 
@@ -31,8 +32,14 @@ Mini-Message-Board
 ├── README.md
 └── src
     ├── app.js
+    ├── controllers
+    │   └── messagesController.js
+    ├── db
+    │   ├── pool.js
+    │   ├── populatedb.js
+    │   └── queries.js
     ├── routes
-    │   └── indexRoute.js
+    │   └── messagesRouter.js
     └── views
         ├── form.ejs
         ├── index.ejs
