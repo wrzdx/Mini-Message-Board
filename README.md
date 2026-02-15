@@ -17,6 +17,7 @@ Users can submit a message with their name, and all messages are displayed on th
 * Node.js
 * Express
 * EJS (templating engine)
+* PostgreSQL (pg library)
 
 ## Project Structure
 
