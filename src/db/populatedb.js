@@ -16,7 +16,7 @@ VALUES
   ('wrzdx', 'Hi, there!');
 `
 
-const connectionString = `postgresql://${process.env.PG_USERNAME}:${process.env.PG_PASSWORD}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env.PG_DATABASE}`
+const connectionString = process.env.DATABASE_URL
 
 async function main() {
   console.log("seeding...")
